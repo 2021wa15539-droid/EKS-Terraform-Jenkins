@@ -33,15 +33,7 @@ pipeline {
                 }
             }
         }
-        stage('Validating Terraform'){
-            steps{
-                script{
-                    dir('terraform'){
-                         sh 'terraform validate'
-                    }
-                }
-            }
-        }
+
         stage('Previewing the infrastructure'){
             steps{
                 script{
