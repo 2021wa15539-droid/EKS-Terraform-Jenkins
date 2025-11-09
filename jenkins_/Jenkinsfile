@@ -13,17 +13,6 @@ pipeline {
                 }
             }
         }
-        stage('Initialize Terraform') {
-  steps {
-    dir('terraform') {
-      sh '''
-        rm -f .terraform.lock.hcl
-        terraform init -upgrade
-      '''
-    }
-  }
-}
-
         stage('Initializing Terraform'){
             steps{
                 script{
